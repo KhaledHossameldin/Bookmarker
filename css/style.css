@@ -1,0 +1,82 @@
+:root {
+    --background-color: #f8e9da;
+    --orange: #ffb860;
+    --green: #3ca55c;
+    --yellow-green: #b5ac49;
+
+    --shaded-orange: #ffb86140;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem var(--shaded-orange);
+    border-color: var(--orange);
+}
+
+::selection {
+    background-color: var(--orange);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-family: "Pacifico";
+}
+
+h1:hover::before {
+    top: 35%;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: 65%;
+    background-color: var(--orange);
+    z-index: -1;
+    transition: 0.35s top;
+    -webkit-transition: 0.35s top;
+    -moz-transition: 0.35s top;
+    -ms-transition: 0.35s top;
+    -o-transition: 0.35s top;
+}
+
+h2 {
+    font-family: "Righteous";
+    background-image: linear-gradient(to right, var(--green), var(--yellow-green));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bookmark-inputs {
+    border-style: dotted;
+    border-inline: none;
+}
+
+/* Fonts */
+@font-face {
+    font-family: PT_Sans_Caption;
+    src: url('../fonts/PT_Sans_Caption/PTSansCaption-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: PT_Sans_Caption;
+    src: url('../fonts/PT_Sans_Caption/PTSansCaption-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url('../fonts/Pacifico/Pacifico-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Righteous;
+    src: url('../fonts/Righteous/Righteous-Regular.ttf');
+    font-weight: 400;
+}
